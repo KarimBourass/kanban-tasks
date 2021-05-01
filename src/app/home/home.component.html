@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [opened]="(isHandset$ | async) === true">
+    <mat-toolbar class="side-toolbar">
+      <img src="https://img.icons8.com/bubbles/80/000000/note.png" />
+      <span>KanbanTasks</span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <div class="nav">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon class="toolbar-icon" aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <img src="https://img.icons8.com/bubbles/80/000000/note.png" />
+        <span>KanbanTasks</span>
+      </div>
+      <div class="search">
+        <input placeholder="Search" type="text" class="ant-input" value="">
+        <mat-icon class="button-icon">search</mat-icon>
+      </div>
+      <div class="params">
+        <mat-icon class="toolbar-icon">grid_view</mat-icon>
+        <mat-icon class="toolbar-icon">settings</mat-icon>
+      </div>
+
+    </mat-toolbar>
+    <app-kanban></app-kanban>
+  </mat-sidenav-content>
+</mat-sidenav-container>

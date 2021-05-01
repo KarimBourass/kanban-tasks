@@ -1,0 +1,84 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 25em;
+  .side-toolbar {
+    padding: 2em 0.5em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(95, 99, 104);
+    height: 3.5em;
+    padding: 8px 20px 8px 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(169 174 183 / 50%) 0px 2px 2px 0px;
+  }
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.toolbar {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(95, 99, 104);
+  height: 3.5em;
+  padding: 8px 20px 8px 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(169 174 183 / 50%) 0px 2px 2px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  .nav {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .toolbar-icon {
+      font-size: 3em;
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgb(241, 243, 244);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.2em 1em;
+    width: 50%;
+
+    input {
+      background: transparent;
+      border: none;
+      font-variant-ligatures: none;
+      height: 38px;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+}
+
+.params {
+  .toolbar-icon {
+    margin-right: 1em;
+    font-size: 2em;
+  }
+}
