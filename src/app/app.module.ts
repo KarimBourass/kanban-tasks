@@ -1,3 +1,4 @@
+import { PomodoroComponent } from './component/pomodoro/pomodoro.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,10 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -25,6 +26,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { AddTaskModalComponent } from './component/add-task-modal/add-task-modal.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+
+
+const routes: Routes = [
+  { path: 'home', component: KanbanComponent },
+  { path: 'pomodoro', component: PomodoroComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+
+];
 
 
 @NgModule({
@@ -37,6 +48,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(routes),
 
     BrowserAnimationsModule,
     LayoutModule,

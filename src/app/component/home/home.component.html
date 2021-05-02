@@ -6,11 +6,11 @@
       <span>KanbanTasks</span>
     </mat-toolbar>
     <mat-nav-list>
-      <a class="side-navigation" mat-list-item href="#">
+      <a class="side-navigation" mat-list-item [routerLink]="['home']">
         <mat-icon class="toolbar-icon">edit_note</mat-icon>
         Kanban
       </a>
-      <a class="side-navigation" mat-list-item href="#">
+      <a class="side-navigation" mat-list-item [routerLink]="['pomodoro']">
         <mat-icon class="toolbar-icon">hourglass_top</mat-icon>
         Pomodoro
       </a>
@@ -35,6 +35,6 @@
       </div>
 
     </mat-toolbar>
-    <app-kanban></app-kanban>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

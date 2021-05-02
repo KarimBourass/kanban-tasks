@@ -1,0 +1,43 @@
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 125px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  mat-icon{
+      font-size: 4em;
+      color: #f43b3b;
+  }
+
+}
+
+button:focus, button:active{
+  outline: none !important;
+}
+
+
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
