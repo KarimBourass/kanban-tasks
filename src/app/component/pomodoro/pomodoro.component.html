@@ -1,1 +1,28 @@
-<p>pomodoro works!</p>
+<div class="content">
+
+  <div class="timer-container">
+    <div class="timer-box">
+      <h2>{{value[0]}}:{{value[1] < 10 ? 0 : '' }}{{value[1]}}</h2>
+    </div>
+
+    <div class="controls">
+      <div *ngIf="!startTimerClicked">
+        <button (click)="startTimer()" mat-icon-button>
+          <mat-icon>play_circle_filled</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button (click)="stopTimer()" mat-icon-button>
+          <mat-icon>stop</mat-icon>
+        </button>
+      </div>
+      <div>
+        <button (click)="resetTimer()" mat-icon-button>
+          <mat-icon>replay</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -18,6 +18,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -43,7 +44,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     KanbanComponent,
-    AddTaskModalComponent
+    AddTaskModalComponent,
+    PomodoroComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,7 @@ const routes: Routes = [
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

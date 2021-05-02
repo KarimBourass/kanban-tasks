@@ -1,43 +1,42 @@
-h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 125px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-button{
-  border: none;
-  background-color: transparent;
-  mat-icon{
-      font-size: 4em;
-      color: #f43b3b;
-  }
-
-}
-
-button:focus, button:active{
-  outline: none !important;
-}
-
-
-
-.example-button-container {
-  display: flex;
-  justify-content: center;
-  width: 120px;
-}
-
-
-.container {
+.content {
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
-}
+  align-items: center;
+  padding-top: 5em;
 
-.controls {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
+  .timer-container {
+    padding: 2em;
+    border-radius: 1em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(169 174 183 / 50%) 4px 5px 2px 0px;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 125px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
+
+  .controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    button {
+      border: none;
+      background-color: transparent;
+      mat-icon {
+        font-size: 4em;
+        color: #f43b3b;
+      }
+    }
+
+    button:focus,
+    button:active {
+      outline: none !important;
+    }
+  }
 }

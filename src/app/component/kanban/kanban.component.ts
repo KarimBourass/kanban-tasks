@@ -16,16 +16,21 @@ import { MatDialog } from '@angular/material/dialog';
 export class KanbanComponent {
 
 
-  todo: Task[] | undefined;
-  inProgress: Task[] | undefined;
-  done: Task[] | undefined;
+  todo!: Task[];
+  inProgress!: Task[];
+  done!: Task[];
+
+  loading=true;
 
 
-  constructor(private fireService: FirebaseService,public dialog: MatDialog) {
+  constructor(private fireService: FirebaseService, public dialog: MatDialog) {
+    console.log('Wach 3amra',this.todo == undefined);
+
 
     this.fireService.getTasks().subscribe(
       items => {
         this.todo = items.filter((item: any) => item.status == 'todo')
+        this.loading =false;
       }
     )
 
@@ -40,6 +45,7 @@ export class KanbanComponent {
         this.done = items.filter((item: any) => item.status == 'done')
       }
     )
+
 
   }
 
