@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { KanbanComponent } from './kanban/kanban.component';
+import { HomeComponent } from './component/home/home.component';
+import { KanbanComponent } from './component/kanban/kanban.component';
 
 
 import { LayoutModule } from '@angular/cdk/layout';
@@ -15,6 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
   ],
   imports: [
     BrowserModule,
+
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -31,7 +36,10 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    DragDropModule
+    DragDropModule,
+
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
