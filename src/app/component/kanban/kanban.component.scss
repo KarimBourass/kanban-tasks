@@ -14,7 +14,6 @@
 }
 
 .kanban-container {
-
   display: flex;
   justify-content: space-around;
 
@@ -48,6 +47,28 @@
     cursor: move;
     background: white;
     font-size: 14px;
+  }
+
+  .add-task {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(95, 99, 104);
+    height: 2.5em;
+
+    button {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .toolbar-icon {
+      margin-right: 1em;
+    }
+  }
+
+  .add-task:hover {
+    color: rgb(66, 133, 244);
   }
 }
 

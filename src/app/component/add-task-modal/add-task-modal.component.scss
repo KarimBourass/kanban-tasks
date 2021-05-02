@@ -1,0 +1,26 @@
+
+.add-task {
+  display: flex;
+  flex-direction: column;
+  height: 15em;
+
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: rgb(95, 99, 104);
+
+  .task-status {
+    margin-top: 2em;
+    height: 3em;
+    border-radius: 8px;
+    padding: 0.2em 1em;
+  }
+  .add-task-input {
+    margin-top: 1em;
+    background: rgb(241, 243, 244);
+    border: 1px solid transparent;
+    height: 3em;
+    border-radius: 8px;
+    padding: 0.2em 1em;
+  }
+}

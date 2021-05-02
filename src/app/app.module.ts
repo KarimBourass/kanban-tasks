@@ -14,20 +14,29 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
+import { AddTaskModalComponent } from './component/add-task-modal/add-task-modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    KanbanComponent
+    KanbanComponent,
+    AddTaskModalComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
 
     BrowserAnimationsModule,
     LayoutModule,
@@ -37,6 +46,9 @@ import { environment } from 'src/environments/environment';
     MatIconModule,
     MatListModule,
     DragDropModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

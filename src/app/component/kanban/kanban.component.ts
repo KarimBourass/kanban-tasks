@@ -1,9 +1,11 @@
+import { AddTaskModalComponent } from './../add-task-modal/add-task-modal.component';
 import { FirebaseService } from './../../services/firebase.service';
 import { Task } from './../../models/task';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { map } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -19,7 +21,7 @@ export class KanbanComponent {
   done: Task[] | undefined;
 
 
-  constructor(private fireService: FirebaseService) {
+  constructor(private fireService: FirebaseService,public dialog: MatDialog) {
 
     this.fireService.getTasks().subscribe(
       items => {
@@ -39,23 +41,25 @@ export class KanbanComponent {
       }
     )
 
-
   }
 
 
-
   drop(event: CdkDragDrop<any>) {
-    console.log('=====CdkDragDrop===');
-    console.log(event.previousContainer.data[event.previousIndex]);
-
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
-        this.fireService.transferArrayItem(event.previousContainer.data[event.previousIndex],
-          event.container.id,
-          event.previousIndex,
-          event.currentIndex);
+      this.fireService.transferArrayItem(event.previousContainer.data[event.previousIndex],
+        event.container.id,
+        event.previousIndex,
+        event.currentIndex);
     }
+  }
+
+  openAdddTaskModal() {
+    const dialogRef = this.dialog.open(AddTaskModalComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

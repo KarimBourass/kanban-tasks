@@ -30,14 +30,8 @@ export class FirebaseService {
 
 
   addTask(task: Task) {
-    const id = Math.random().toString(36).substring(7);
-    const item: Task = {
-      status: '',
-      description: '',
-      index: 1
-    }
-    const addToFirebase = this.firestore.collection<Task>(task.status);
-    addToFirebase.add(item);
+    const addToFirebase = this.firestore.collection<Task>('task');
+    addToFirebase.add(task);
   }
 
   updateTask(task: any, newStatus: String) {
