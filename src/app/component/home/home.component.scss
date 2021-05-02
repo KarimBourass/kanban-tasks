@@ -3,17 +3,28 @@
 }
 
 .sidenav {
-  width: 25em;
+  width: 18em;
   .side-toolbar {
     padding: 2em 0.5em;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(95, 99, 104);
-    height: 3.5em;
+    height: 3em;
     padding: 8px 20px 8px 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(169 174 183 / 50%) 0px 2px 2px 0px;
+  }
+
+  .side-navigation {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(95, 99, 104);
+
+    .toolbar-icon {
+      margin-right: 1em;
+    }
   }
 }
 
@@ -30,9 +41,9 @@
 .toolbar {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(95, 99, 104);
-  height: 3.5em;
+  height: 3em;
   padding: 8px 20px 8px 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgb(169 174 183 / 50%) 0px 2px 2px 0px;
@@ -40,13 +51,13 @@
   justify-content: space-between;
 
   .nav {
-    width: 20%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     .toolbar-icon {
-      font-size: 3em;
+      font-size: 2.2em;
     }
   }
 
@@ -79,6 +90,6 @@
 .params {
   .toolbar-icon {
     margin-right: 1em;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }

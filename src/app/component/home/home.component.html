@@ -2,12 +2,18 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [opened]="(isHandset$ | async) === true">
     <mat-toolbar class="side-toolbar">
-      <img src="https://img.icons8.com/bubbles/80/000000/note.png" />
+      <img src="https://img.icons8.com/bubbles/60/000000/note.png" />
       <span>KanbanTasks</span>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
+      <a class="side-navigation" mat-list-item href="#">
+        <mat-icon class="toolbar-icon">edit_note</mat-icon>
+        Kanban
+      </a>
+      <a class="side-navigation" mat-list-item href="#">
+        <mat-icon class="toolbar-icon">hourglass_top</mat-icon>
+        Pomodoro
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -16,7 +22,7 @@
         <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
           <mat-icon class="toolbar-icon" aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <img src="https://img.icons8.com/bubbles/80/000000/note.png" />
+        <img src="https://img.icons8.com/bubbles/60/000000/note.png" />
         <span>KanbanTasks</span>
       </div>
       <div class="search">
